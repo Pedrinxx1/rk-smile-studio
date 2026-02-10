@@ -47,7 +47,7 @@ const CTASection = () => {
             com o carinho que merece.
           </p>
           <WhatsAppButton size="lg">
-            Agendar minha avaliação gratuita
+            Agendar avaliação no WhatsApp
           </WhatsAppButton>
 
           <p className="text-primary-foreground/25 text-xs mt-6 tracking-wide">
