@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Smile, Sparkles, CircleDot, Star, Sun, Shield, ArrowRight } from "lucide-react";
+import { Smile, Sparkles, CircleDot, Star, Sun, ArrowRight, Syringe } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
 
 const services = [
@@ -16,23 +16,18 @@ const services = [
   },
   {
     icon: Smile,
-    title: "Facetas Dentárias",
-    description: "Correção estética personalizada para dentes com lascas, manchas ou desalinhamentos leves.",
+    title: "Harmonização Facial",
+    description: "Equilíbrio e harmonia facial com técnicas avançadas e resultados naturais e duradouros.",
   },
   {
     icon: Star,
-    title: "Harmonização Facial",
-    description: "Equilíbrio e harmonia facial com técnicas avançadas e resultados naturais e duradouros.",
+    title: "Botox",
+    description: "Suavize linhas de expressão e rejuvenesça o rosto com aplicações seguras e resultados naturais.",
   },
   {
     icon: CircleDot,
     title: "Implantes Dentários",
     description: "Reabilitação oral com implantes modernos, devolvendo função mastigatória e estética ao seu sorriso.",
-  },
-  {
-    icon: Shield,
-    title: "Atendimento por Convênio",
-    description: "Aceitamos diversos convênios odontológicos para facilitar o seu acesso a tratamentos de qualidade.",
   },
 ];
 
