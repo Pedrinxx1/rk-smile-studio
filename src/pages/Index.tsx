@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <BenefitsSection />
       <LocationSection />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
