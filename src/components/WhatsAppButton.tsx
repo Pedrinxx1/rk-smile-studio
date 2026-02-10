@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/55SEUNUMERO?text=Olá! Gostaria de agendar uma avaliação.";
+const WHATSAPP_URL = "https://wa.me/5561998378600?text=Olá! Gostaria de agendar uma avaliação.";
 
 interface WhatsAppButtonProps {
   children: React.ReactNode;

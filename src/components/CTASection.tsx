@@ -43,11 +43,10 @@ const CTASection = () => {
             seu sorriso?
           </h2>
           <p className="text-primary-foreground/50 text-lg leading-relaxed mb-10 max-w-md mx-auto">
-            Agende sua avaliação gratuita e descubra como podemos cuidar de você 
-            com o carinho que merece.
+            Agende sua avaliação e descubra o tratamento ideal para você.
           </p>
           <WhatsAppButton size="lg">
-            Agendar avaliação no WhatsApp
+            Falar com a RK no WhatsApp
           </WhatsAppButton>
 
           <p className="text-primary-foreground/25 text-xs mt-6 tracking-wide">

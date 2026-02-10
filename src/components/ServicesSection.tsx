@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Smile, Sparkles, CircleDot, Star, Sun, ArrowRight } from "lucide-react";
+import { Smile, Sparkles, CircleDot, Star, Sun, Shield, ArrowRight } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
 
 const services = [
@@ -10,9 +10,14 @@ const services = [
     description: "Dentes mais brancos e luminosos com técnicas seguras, rápidas e resultados visíveis desde a primeira sessão.",
   },
   {
-    icon: CircleDot,
-    title: "Implantes Dentários",
-    description: "Reabilitação oral com implantes modernos, devolvendo função mastigatória e estética ao seu sorriso.",
+    icon: Sparkles,
+    title: "Lente de Contato Dental",
+    description: "Transforme seu sorriso com lentes ultrafinas que corrigem cor, forma e alinhamento dos dentes.",
+  },
+  {
+    icon: Smile,
+    title: "Facetas Dentárias",
+    description: "Correção estética personalizada para dentes com lascas, manchas ou desalinhamentos leves.",
   },
   {
     icon: Star,
@@ -20,14 +25,14 @@ const services = [
     description: "Equilíbrio e harmonia facial com técnicas avançadas e resultados naturais e duradouros.",
   },
   {
-    icon: Sparkles,
-    title: "Lentes de Contato Dental",
-    description: "Transforme seu sorriso com lentes ultrafinas que corrigem cor, forma e alinhamento dos dentes.",
+    icon: CircleDot,
+    title: "Implantes Dentários",
+    description: "Reabilitação oral com implantes modernos, devolvendo função mastigatória e estética ao seu sorriso.",
   },
   {
-    icon: Smile,
-    title: "Estética Odontológica",
-    description: "Procedimentos estéticos completos para realçar sua beleza natural com segurança e precisão.",
+    icon: Shield,
+    title: "Atendimento por Convênio",
+    description: "Aceitamos diversos convênios odontológicos para facilitar o seu acesso a tratamentos de qualidade.",
   },
 ];
 
@@ -63,16 +68,14 @@ const ServicesSection = () => {
         </motion.div>
 
         {/* Service grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto mb-16">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 25 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className={`group relative rounded-2xl p-7 bg-card border border-border/60 hover:border-primary/25 hover:shadow-gold transition-all duration-500 ${
-                i === 4 ? "sm:col-span-2 lg:col-span-1" : ""
-              }`}
+              className="group relative rounded-2xl p-7 bg-card border border-border/60 hover:border-primary/25 hover:shadow-gold transition-all duration-500"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-xl bg-primary/[0.07] flex items-center justify-center mb-5 group-hover:bg-primary/[0.12] group-hover:scale-105 transition-all duration-500">
@@ -108,7 +111,7 @@ const ServicesSection = () => {
             Qual tratamento é ideal para você?
           </p>
           <WhatsAppButton size="lg">
-            Agendar avaliação no WhatsApp
+            Agendar pelo WhatsApp
           </WhatsAppButton>
         </motion.div>
       </div>
