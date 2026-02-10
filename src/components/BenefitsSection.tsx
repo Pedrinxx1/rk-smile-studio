@@ -1,31 +1,28 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Heart, Award, Building2, MessageCircle } from "lucide-react";
+import { Heart, Award, Building2, MessageCircle, ArrowRight } from "lucide-react";
+import WhatsAppButton from "./WhatsAppButton";
 
 const benefits = [
   {
     icon: Heart,
     title: "Atendimento Humanizado",
-    description: "Cuidamos de cada paciente de forma individual e acolhedora, com atenção aos detalhes.",
-    number: "01",
+    description: "Cada paciente é único. Cuidamos de você com atenção, respeito e acolhimento genuíno em todas as etapas.",
   },
   {
     icon: Award,
     title: "Profissionais Qualificados",
-    description: "Equipe com formação especializada e experiência comprovada em odontologia e estética.",
-    number: "02",
+    description: "Equipe com formação especializada e experiência comprovada, sempre em atualização constante.",
   },
   {
     icon: Building2,
     title: "Ambiente Moderno",
-    description: "Consultório equipado com tecnologia de ponta para seu conforto e segurança.",
-    number: "03",
+    description: "Consultório equipado com tecnologia de ponta para garantir seu conforto e os melhores resultados.",
   },
   {
     icon: MessageCircle,
     title: "Fácil Agendamento",
-    description: "Agende sua consulta de forma rápida e prática pelo WhatsApp, sem complicações.",
-    number: "04",
+    description: "Agende sua consulta de forma rápida e prática pelo WhatsApp. Sem burocracia, sem complicação.",
   },
 ];
 
@@ -34,62 +31,75 @@ const BenefitsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="diferenciais" className="relative py-24 lg:py-32 bg-foreground overflow-hidden">
+    <section id="diferenciais" className="relative py-24 lg:py-36 bg-foreground overflow-hidden">
       {/* Decorative */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-      <div className="absolute top-1/3 left-0 w-72 h-72 rounded-full bg-gold/5 blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gold/3 blur-3xl" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
+      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] rounded-full bg-gold/3 blur-[150px]" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-gold/2 blur-[120px]" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/20 text-gold-light text-xs font-semibold tracking-[0.15em] uppercase mb-6">
-            Diferenciais
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-background leading-tight mb-4">
-            Por que escolher a{" "}
-            <span className="text-gradient-gold italic">RK?</span>
-          </h2>
-          <p className="text-background/50 text-lg max-w-lg mx-auto">
-            Excelência e cuidado em cada etapa do seu tratamento.
-          </p>
-        </motion.div>
+      <div className="container mx-auto px-6 lg:px-16 relative z-10" ref={ref}>
+        <div className="grid lg:grid-cols-5 gap-16 items-start">
+          {/* Left: heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7 }}
+            className="lg:col-span-2 lg:sticky lg:top-32"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/15 text-gold-light text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+              Diferenciais
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-background leading-[1.15] mb-6">
+              Por que{" "}
+              <span className="text-gradient-gold italic">escolher</span>
+              {" "}a RK?
+            </h2>
+            <div className="w-16 h-[2px] bg-gradient-gold rounded-full mb-8" />
+            <p className="text-background/40 text-base leading-relaxed mb-10">
+              Mais do que tratar, nosso propósito é transformar a relação dos nossos pacientes 
+              com sua saúde bucal e autoestima.
+            </p>
+            <div className="hidden lg:block">
+              <WhatsAppButton>
+                Falar com a equipe
+              </WhatsAppButton>
+            </div>
+          </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {benefits.map((benefit, i) => (
-            <motion.div
-              key={benefit.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative rounded-2xl p-8 border border-background/10 hover:border-gold/30 bg-background/5 hover:bg-background/10 transition-all duration-500"
-            >
-              <div className="flex items-start gap-5">
-                <div className="shrink-0">
-                  <span className="text-gold/20 font-display text-5xl font-bold leading-none group-hover:text-gold/40 transition-colors duration-500">
-                    {benefit.number}
-                  </span>
-                </div>
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-500">
-                      <benefit.icon className="w-5 h-5 text-gold-light" />
-                    </div>
-                    <h3 className="text-lg font-display font-bold text-background">
+          {/* Right: cards */}
+          <div className="lg:col-span-3 space-y-5">
+            {benefits.map((benefit, i) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 25 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+                className="group relative rounded-2xl p-7 lg:p-8 border border-background/8 hover:border-gold/20 bg-background/[0.04] hover:bg-background/[0.08] transition-all duration-500"
+              >
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-xl bg-gold/8 border border-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/15 group-hover:border-gold/25 transition-all duration-500">
+                    <benefit.icon className="w-5 h-5 text-gold-light" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-display font-bold text-background mb-2 group-hover:text-gold-light transition-colors duration-300">
                       {benefit.title}
                     </h3>
+                    <p className="text-background/40 leading-relaxed text-sm group-hover:text-background/55 transition-colors duration-300">
+                      {benefit.description}
+                    </p>
                   </div>
-                  <p className="text-background/50 leading-relaxed text-sm">
-                    {benefit.description}
-                  </p>
+                  <ArrowRight className="w-5 h-5 text-background/10 group-hover:text-gold/50 transition-all duration-300 shrink-0 mt-1 translate-x-0 group-hover:translate-x-1" />
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+
+            {/* Mobile CTA */}
+            <div className="lg:hidden pt-4 text-center">
+              <WhatsAppButton size="lg">
+                Falar com a equipe
+              </WhatsAppButton>
+            </div>
+          </div>
         </div>
       </div>
     </section>

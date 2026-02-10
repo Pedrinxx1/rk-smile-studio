@@ -1,104 +1,125 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, Navigation } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
+
+const contactInfo = [
+  {
+    icon: MapPin,
+    title: "Endereço",
+    content: "Setor Sul Qd 01, Conjunto G, Lote 19, Sala 201",
+    subtitle: "Gama, Brasília – DF",
+  },
+  {
+    icon: Clock,
+    title: "Horário",
+    content: "Horários flexíveis",
+    subtitle: "Consulte disponibilidade pelo WhatsApp",
+  },
+  {
+    icon: Phone,
+    title: "Contato",
+    content: "WhatsApp",
+    subtitle: "Resposta rápida e atendimento humanizado",
+  },
+];
 
 const LocationSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contato" className="relative py-24 lg:py-32 bg-card overflow-hidden">
+    <section id="contato" className="relative py-24 lg:py-36 bg-card overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-gold/5 blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/3 blur-[150px]" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
-          {/* Left: Info */}
+      <div className="container mx-auto px-6 lg:px-16 relative z-10" ref={ref}>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block text-primary font-semibold tracking-[0.25em] uppercase text-xs mb-5">
+            Localização e Contato
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-card-foreground leading-tight mb-4">
+            Venha nos{" "}
+            <span className="text-gradient-gold italic">visitar</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-lg mx-auto">
+            Estamos prontos para receber você com todo o cuidado que merece.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
+          {/* Left: Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="lg:col-span-2 space-y-6"
           >
-            <span className="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-4">
-              Localização e Contato
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-card-foreground leading-tight mb-6">
-              Venha nos{" "}
-              <span className="text-gradient-gold italic">visitar</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-gold rounded-full mb-10" />
-
-            <div className="space-y-6 mb-10">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
+            {contactInfo.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: -20 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                className="flex items-start gap-4 p-5 rounded-xl bg-background/50 border border-border/40 hover:border-primary/20 hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-11 h-11 rounded-lg bg-accent flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground text-sm mb-1">Endereço</p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Setor Sul Qd 01, Conjunto G, Lote 19, Sala 201 – Gama, Brasília – DF
-                  </p>
+                  <p className="font-semibold text-foreground text-sm mb-0.5">{item.title}</p>
+                  <p className="text-foreground/80 text-sm">{item.content}</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">{item.subtitle}</p>
                 </div>
-              </div>
+              </motion.div>
+            ))}
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm mb-1">Horário</p>
-                  <p className="text-muted-foreground">
-                    Agende pelo WhatsApp e saiba os horários disponíveis
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm mb-1">Contato</p>
-                  <p className="text-muted-foreground">
-                    Fale conosco pelo WhatsApp para agendar sua avaliação
-                  </p>
-                </div>
-              </div>
+            <div className="pt-4">
+              <WhatsAppButton size="lg" className="w-full justify-center">
+                Falar no WhatsApp
+              </WhatsAppButton>
             </div>
-
-            <WhatsAppButton size="lg">
-              Falar no WhatsApp
-            </WhatsAppButton>
           </motion.div>
 
-          {/* Right: Map placeholder */}
+          {/* Right: Map */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative"
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="lg:col-span-3 relative"
           >
-            <div className="aspect-square rounded-2xl bg-accent border border-border overflow-hidden">
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-border/50 bg-accent">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.0!2d-48.06!3d-15.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDU3JzAzLjAiUyA0OMKwMDMnMzYuMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: 400 }}
+                style={{ border: 0, minHeight: 420 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização RK Odontologia e Estética"
-                className="grayscale hover:grayscale-0 transition-all duration-700"
+                className="grayscale-[0.6] hover:grayscale-0 transition-all duration-700"
               />
             </div>
+
             {/* Floating badge */}
-            <div className="absolute -top-4 -left-4 glass rounded-xl p-4 shadow-lg border border-border/50 animate-float">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#25D366] animate-pulse-soft" />
-                <span className="text-xs font-semibold text-foreground">Atendendo agora</span>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="absolute -top-5 right-6 glass-strong rounded-xl px-5 py-3 shadow-lg border border-border/50 animate-float"
+            >
+              <div className="flex items-center gap-2.5">
+                <Navigation className="w-4 h-4 text-primary" />
+                <span className="text-xs font-semibold text-foreground">Fácil acesso no Gama – DF</span>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
