@@ -46,7 +46,7 @@ const HeroSection = () => {
                   ))}
                 </span>
                 <span className="text-primary-foreground/70 text-[11px] font-medium tracking-wider uppercase">
-                  5.0 no Google · +40 avaliações
+                  5,0 no Google · 41 avaliações
                 </span>
               </span>
             </motion.div>
@@ -92,7 +92,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 items-start"
             >
               <WhatsAppButton size="lg">
-                Agendar avaliação no WhatsApp
+                Agendar no WhatsApp agora
               </WhatsAppButton>
               <a
                 href="tel:+5561998378600"

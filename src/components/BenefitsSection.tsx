@@ -55,7 +55,7 @@ const BenefitsSection = () => {
             <span className="text-gradient-gold italic">escolher</span> a RK?
           </h2>
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/[0.06] mb-5">
-            <span className="text-primary font-semibold text-sm">⭐ Avaliação 5,0 no Google</span>
+            <span className="text-primary font-semibold text-sm">⭐ 5,0 no Google (41 avaliações)</span>
           </div>
           <p className="text-muted-foreground leading-relaxed">
             Pacientes satisfeitos com atendimento de excelência, desde a recepção até o resultado final.
@@ -98,7 +98,7 @@ const BenefitsSection = () => {
           className="text-center"
         >
           <WhatsAppButton size="lg">
-            Falar com a equipe
+            Agendar no WhatsApp agora
           </WhatsAppButton>
         </motion.div>
       </div>
