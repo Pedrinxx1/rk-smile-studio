@@ -1,38 +1,38 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Smile, Sparkles, CircleDot, Star, Sun, ArrowRight } from "lucide-react";
+import { Smile, Sparkles, CircleDot, Star, Sun, ArrowUpRight } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
 
 const services = [
   {
     icon: Smile,
     title: "Odontologia Geral",
-    description: "Tratamentos completos para a saúde e manutenção dos seus dentes, com conforto e tecnologia.",
-    accent: "from-primary/10 to-accent/30",
+    description: "Tratamentos completos para a saúde e manutenção dos seus dentes, com conforto e tecnologia de ponta.",
+    number: "01",
   },
   {
     icon: Sparkles,
     title: "Estética Facial",
-    description: "Procedimentos estéticos para realçar a beleza natural do seu rosto com segurança.",
-    accent: "from-gold-glow/10 to-accent/30",
+    description: "Procedimentos estéticos para realçar a beleza natural do seu rosto com segurança e resultados naturais.",
+    number: "02",
   },
   {
     icon: CircleDot,
     title: "Implantes",
     description: "Reabilitação oral com implantes modernos, devolvendo função e estética ao seu sorriso.",
-    accent: "from-primary/10 to-secondary/50",
+    number: "03",
   },
   {
     icon: Star,
     title: "Harmonização Facial",
-    description: "Equilíbrio e harmonia facial com técnicas avançadas para resultados naturais.",
-    accent: "from-gold-glow/10 to-accent/40",
+    description: "Equilíbrio e harmonia facial com técnicas avançadas para resultados naturais e duradouros.",
+    number: "04",
   },
   {
     icon: Sun,
     title: "Clareamento Dental",
-    description: "Dentes mais brancos e saudáveis com técnicas seguras e resultados visíveis.",
-    accent: "from-primary/10 to-accent/30",
+    description: "Dentes mais brancos e saudáveis com técnicas seguras e resultados visíveis desde a primeira sessão.",
+    number: "05",
   },
 ];
 
@@ -41,56 +41,73 @@ const ServicesSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="servicos" className="relative py-24 lg:py-32 bg-background overflow-hidden">
-      {/* Decorative */}
+    <section id="servicos" className="relative py-24 lg:py-36 bg-background overflow-hidden">
+      {/* Decorative elements */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      <div className="absolute top-1/2 -translate-y-1/2 right-0 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
+      <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-gold/3 blur-[150px]" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 rounded-full bg-accent/30 blur-[100px]" />
 
-      <div className="container mx-auto px-6 lg:px-12" ref={ref}>
+      <div className="container mx-auto px-6 lg:px-16" ref={ref}>
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="max-w-2xl mb-16"
         >
-          <span className="inline-block text-primary font-semibold tracking-[0.2em] uppercase text-xs mb-4">
+          <span className="inline-block text-primary font-semibold tracking-[0.25em] uppercase text-xs mb-5">
             Nossos Serviços
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground leading-tight mb-5">
             Tratamentos{" "}
             <span className="text-gradient-gold italic">especializados</span>
+            {" "}para você
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Soluções completas em odontologia e estética para cuidar de você.
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            Soluções completas em odontologia e estética facial, com tecnologia moderna e 
+            profissionais qualificados para cuidar da sua saúde e beleza.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-14">
+        {/* Service cards - alternating layout */}
+        <div className="space-y-4 max-w-5xl mb-16">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative bg-card rounded-2xl p-8 border border-border/60 hover:border-primary/30 transition-all duration-500 hover:shadow-gold cursor-pointer overflow-hidden"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="group relative rounded-2xl border border-border/60 hover:border-primary/30 bg-card hover:bg-card/80 transition-all duration-500 hover:shadow-gold overflow-hidden"
             >
-              {/* Background gradient on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
+              <div className="flex items-center gap-6 p-6 lg:p-8">
+                {/* Number */}
+                <span className="hidden sm:block text-5xl font-display font-bold text-border/80 group-hover:text-primary/20 transition-colors duration-500 leading-none select-none">
+                  {service.number}
+                </span>
 
-              <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-gradient-gold/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:shadow-gold transition-all duration-500 group-hover:scale-110">
-                  <service.icon className="w-7 h-7 text-primary" />
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-xl bg-accent border border-border/50 flex items-center justify-center shrink-0 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-500">
+                  <service.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-display font-bold text-card-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
-                  {service.description}
-                </p>
-                <div className="flex items-center gap-1.5 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                  Saiba mais <ArrowRight className="w-4 h-4" />
+
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg lg:text-xl font-display font-bold text-card-foreground mb-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Arrow */}
+                <div className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center shrink-0 opacity-0 group-hover:opacity-100 group-hover:bg-primary group-hover:border-primary transition-all duration-300 -translate-x-2 group-hover:translate-x-0">
+                  <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
                 </div>
               </div>
+
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </motion.div>
           ))}
         </div>
@@ -102,6 +119,9 @@ const ServicesSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
         >
+          <p className="text-muted-foreground mb-6 text-sm">
+            Quer saber qual tratamento é ideal para você?
+          </p>
           <WhatsAppButton size="lg">
             Agendar avaliação no WhatsApp
           </WhatsAppButton>
