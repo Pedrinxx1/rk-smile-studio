@@ -7,20 +7,20 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Endereço",
-    content: "Setor Sul Qd 01, Conj. G, Lote 19, Sala 201",
-    subtitle: "Gama, Brasília – DF",
+    content: "St. Sul – Gama, Brasília – DF, Brasil",
+    subtitle: "CEP 72410-107",
+  },
+  {
+    icon: Phone,
+    title: "WhatsApp",
+    content: "(61) 99837-8600",
+    subtitle: "rkodontologiadf@gmail.com",
   },
   {
     icon: Clock,
     title: "Horário",
-    content: "Horários flexíveis",
-    subtitle: "Consulte disponibilidade pelo WhatsApp",
-  },
-  {
-    icon: Phone,
-    title: "Contato",
-    content: "WhatsApp",
-    subtitle: "Resposta rápida e atendimento humanizado",
+    content: "Seg a Sex: 09:00–12:00 / 14:00–17:00",
+    subtitle: "Sáb: 09:00–12:00 · Dom: Fechado",
   },
 ];
 

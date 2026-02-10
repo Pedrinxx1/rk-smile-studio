@@ -51,12 +51,14 @@ const Footer = () => {
             <h4 className="text-primary-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase mb-5">
               Contato
             </h4>
-            <div className="flex items-start gap-2 mb-4">
+            <div className="flex items-start gap-2 mb-3">
               <MapPin className="w-4 h-4 text-primary-foreground/30 mt-0.5 shrink-0" />
               <p className="text-primary-foreground/50 text-sm leading-relaxed">
-                Setor Sul Qd 01, Conj. G, Lote 19, Sala 201 – Gama, Brasília – DF
+                St. Sul – Gama, Brasília – DF<br />CEP 72410-107
               </p>
             </div>
+            <p className="text-primary-foreground/50 text-sm mb-1">📞 (61) 99837-8600</p>
+            <p className="text-primary-foreground/50 text-sm mb-4">📧 rkodontologiadf@gmail.com</p>
             <a
               href="https://instagram.com/"
               target="_blank"

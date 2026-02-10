@@ -80,8 +80,8 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.9 }}
               className="text-base sm:text-lg text-primary-foreground/50 mb-10 leading-relaxed max-w-md font-light"
             >
-              Odontologia e estética facial com atendimento humanizado, 
-              tecnologia de ponta e resultados que transformam vidas.
+              Na RK Odontologia & Estética, devolvemos o que há de melhor em você: 
+              saúde, estética e confiança ao sorrir.
             </motion.p>
 
             {/* CTA buttons */}
@@ -95,7 +95,7 @@ const HeroSection = () => {
                 Agendar avaliação no WhatsApp
               </WhatsAppButton>
               <a
-                href="tel:+55SEUNUMERO"
+                href="tel:+5561998378600"
                 className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full border border-primary-foreground/15 text-primary-foreground/70 text-sm font-medium hover:bg-primary-foreground/5 hover:border-primary-foreground/25 hover:text-primary-foreground transition-all duration-300"
               >
                 <Phone className="w-4 h-4" />

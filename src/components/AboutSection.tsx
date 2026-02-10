@@ -85,12 +85,13 @@ const AboutSection = () => {
             <div className="w-14 h-[2px] bg-gradient-gold rounded-full mb-8" />
 
             <p className="text-muted-foreground leading-relaxed mb-4">
-              A <strong className="text-foreground font-semibold">RK Odontologia e Estética</strong> é 
-              um consultório no Gama – DF, dedicado à odontologia e estética facial com excelência e carinho.
+              A <strong className="text-foreground font-semibold">RK Odontologia & Estética</strong> é 
+              um consultório onde unimos tecnologia, estética e atendimento humanizado para oferecer 
+              tratamentos completos e personalizados.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-10 text-[15px]">
-              Nosso compromisso é oferecer um atendimento humanizado, com foco na saúde, 
-              bem-estar e autoestima dos nossos pacientes.
+              Nosso compromisso é devolver saúde, bem-estar e autoestima a cada paciente, 
+              com cuidado e excelência em cada detalhe.
             </p>
 
             {/* Checklist */}

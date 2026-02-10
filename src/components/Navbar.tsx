@@ -62,7 +62,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/55SEUNUMERO?text=Olá! Gostaria de agendar uma avaliação."
+              href="https://wa.me/5561998378600?text=Olá! Gostaria de agendar uma avaliação."
               target="_blank"
               rel="noopener noreferrer"
               className="ml-3 bg-gradient-gold text-primary-foreground px-5 py-2 rounded-xl text-sm font-semibold shadow-gold hover:shadow-gold-lg transition-all duration-300 hover:-translate-y-0.5"
@@ -108,7 +108,7 @@ const Navbar = () => {
                   </motion.a>
                 ))}
                 <a
-                  href="https://wa.me/55SEUNUMERO?text=Olá! Gostaria de agendar uma avaliação."
+                  href="https://wa.me/5561998378600?text=Olá! Gostaria de agendar uma avaliação."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 bg-gradient-gold text-primary-foreground px-6 py-3 rounded-xl text-sm font-semibold shadow-gold text-center"
