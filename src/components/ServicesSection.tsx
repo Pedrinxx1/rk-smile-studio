@@ -111,7 +111,7 @@ const ServicesSection = () => {
             Qual tratamento é ideal para você?
           </p>
           <WhatsAppButton size="lg">
-            Agendar pelo WhatsApp
+            Agendar no WhatsApp agora
           </WhatsAppButton>
         </motion.div>
       </div>

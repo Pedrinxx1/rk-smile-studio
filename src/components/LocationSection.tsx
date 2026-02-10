@@ -82,7 +82,7 @@ const LocationSection = () => {
 
             <div className="pt-3">
               <WhatsAppButton size="lg" className="w-full justify-center">
-                Falar no WhatsApp
+                Agendar no WhatsApp agora
               </WhatsAppButton>
             </div>
           </motion.div>
