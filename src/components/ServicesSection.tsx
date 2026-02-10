@@ -5,29 +5,29 @@ import WhatsAppButton from "./WhatsAppButton";
 
 const services = [
   {
-    icon: Smile,
-    title: "Odontologia Geral",
-    description: "Tratamentos completos para a saúde e manutenção dos seus dentes com conforto e tecnologia.",
-  },
-  {
-    icon: Sparkles,
-    title: "Estética Facial",
-    description: "Procedimentos para realçar sua beleza natural com segurança e resultados harmoniosos.",
+    icon: Sun,
+    title: "Clareamento Dental",
+    description: "Dentes mais brancos e luminosos com técnicas seguras, rápidas e resultados visíveis desde a primeira sessão.",
   },
   {
     icon: CircleDot,
     title: "Implantes Dentários",
-    description: "Reabilitação oral com implantes modernos, devolvendo função e estética ao seu sorriso.",
+    description: "Reabilitação oral com implantes modernos, devolvendo função mastigatória e estética ao seu sorriso.",
   },
   {
     icon: Star,
     title: "Harmonização Facial",
-    description: "Equilíbrio e harmonia facial com técnicas avançadas para resultados naturais e duradouros.",
+    description: "Equilíbrio e harmonia facial com técnicas avançadas e resultados naturais e duradouros.",
   },
   {
-    icon: Sun,
-    title: "Clareamento Dental",
-    description: "Dentes mais brancos e saudáveis com técnicas seguras e resultados visíveis.",
+    icon: Sparkles,
+    title: "Lentes de Contato Dental",
+    description: "Transforme seu sorriso com lentes ultrafinas que corrigem cor, forma e alinhamento dos dentes.",
+  },
+  {
+    icon: Smile,
+    title: "Estética Odontológica",
+    description: "Procedimentos estéticos completos para realçar sua beleza natural com segurança e precisão.",
   },
 ];
 
