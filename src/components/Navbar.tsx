@@ -26,21 +26,21 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass-strong border-b border-border/30 shadow-lg"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/40 shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold">
-              <span className="text-primary-foreground font-display font-bold text-lg">R</span>
+          <a href="#" className="flex items-center gap-2.5">
+            <div className={`w-9 h-9 rounded-xl bg-gradient-gold flex items-center justify-center shadow-gold transition-all duration-300 ${scrolled ? "" : "shadow-gold-lg"}`}>
+              <span className="text-primary-foreground font-display font-bold text-sm">R</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-display text-lg font-bold text-foreground leading-tight">
-                RK <span className="text-gradient-gold">Odontologia</span>
+              <span className={`font-display text-base font-bold leading-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
+                RK <span className="text-gradient-gold">Odonto</span>
               </span>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
+              <span className={`text-[9px] tracking-[0.2em] uppercase font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-primary-foreground/40"}`}>
                 & Estética
               </span>
             </div>
@@ -52,7 +52,11 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="relative text-muted-foreground hover:text-foreground transition-colors text-sm font-medium px-4 py-2 rounded-lg hover:bg-accent/50"
+                className={`text-sm font-medium px-4 py-2 rounded-lg transition-all duration-300 ${
+                  scrolled
+                    ? "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                    : "text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/5"
+                }`}
               >
                 {link.label}
               </a>
@@ -61,7 +65,7 @@ const Navbar = () => {
               href="https://wa.me/55SEUNUMERO?text=Olá! Gostaria de agendar uma avaliação."
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 bg-gradient-gold text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold shadow-gold hover:shadow-gold-lg transition-all duration-300 hover:-translate-y-0.5"
+              className="ml-3 bg-gradient-gold text-primary-foreground px-5 py-2 rounded-xl text-sm font-semibold shadow-gold hover:shadow-gold-lg transition-all duration-300 hover:-translate-y-0.5"
             >
               Agendar
             </a>
@@ -70,7 +74,9 @@ const Navbar = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground p-2 rounded-lg hover:bg-accent/50 transition-colors"
+            className={`md:hidden p-2 rounded-lg transition-colors ${
+              scrolled ? "text-foreground hover:bg-accent/50" : "text-primary-foreground hover:bg-primary-foreground/10"
+            }`}
             aria-label="Menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -87,7 +93,7 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="pb-6 pt-2 flex flex-col gap-2">
+              <div className="pb-6 pt-2 flex flex-col gap-1 bg-background/90 backdrop-blur-xl rounded-2xl p-4 mb-4 border border-border/30">
                 {navLinks.map((link, i) => (
                   <motion.a
                     key={link.href}
@@ -96,7 +102,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium px-4 py-3 rounded-lg hover:bg-accent/50"
+                    className="text-foreground hover:text-primary transition-colors text-base font-medium px-4 py-3 rounded-xl hover:bg-accent/50"
                   >
                     {link.label}
                   </motion.a>
@@ -105,7 +111,7 @@ const Navbar = () => {
                   href="https://wa.me/55SEUNUMERO?text=Olá! Gostaria de agendar uma avaliação."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 bg-gradient-gold text-primary-foreground px-6 py-3 rounded-full text-sm font-semibold shadow-gold text-center"
+                  className="mt-2 bg-gradient-gold text-primary-foreground px-6 py-3 rounded-xl text-sm font-semibold shadow-gold text-center"
                 >
                   Agendar avaliação
                 </a>

@@ -7,7 +7,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Endereço",
-    content: "Setor Sul Qd 01, Conjunto G, Lote 19, Sala 201",
+    content: "Setor Sul Qd 01, Conj. G, Lote 19, Sala 201",
     subtitle: "Gama, Brasília – DF",
   },
   {
@@ -29,9 +29,8 @@ const LocationSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contato" className="relative py-24 lg:py-36 bg-card overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/3 blur-[150px]" />
+    <section id="contato" className="relative py-28 lg:py-40 bg-secondary overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
 
       <div className="container mx-auto px-6 lg:px-16 relative z-10" ref={ref}>
         {/* Header */}
@@ -41,36 +40,37 @@ const LocationSection = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-primary font-semibold tracking-[0.25em] uppercase text-xs mb-5">
-            Localização e Contato
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/[0.06] text-primary text-[11px] font-semibold tracking-[0.2em] uppercase mb-6">
+            <Navigation className="w-3.5 h-3.5" />
+            Localização
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-card-foreground leading-tight mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-display font-bold text-foreground leading-tight mb-4">
             Venha nos{" "}
             <span className="text-gradient-gold italic">visitar</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-lg mx-auto">
+          <p className="text-muted-foreground max-w-md mx-auto">
             Estamos prontos para receber você com todo o cuidado que merece.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
-          {/* Left: Contact info */}
+        <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          {/* Contact info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-2 space-y-6"
+            className="lg:col-span-2 space-y-4"
           >
             {contactInfo.map((item, i) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, x: -20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
+                initial={{ opacity: 0, y: 15 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                className="flex items-start gap-4 p-5 rounded-xl bg-background/50 border border-border/40 hover:border-primary/20 hover:shadow-md transition-all duration-300"
+                className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border/50 hover:border-primary/20 hover:shadow-md transition-all duration-300"
               >
-                <div className="w-11 h-11 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                  <item.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-xl bg-primary/[0.07] flex items-center justify-center shrink-0">
+                  <item.icon className="w-4.5 h-4.5 text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground text-sm mb-0.5">{item.title}</p>
@@ -80,21 +80,21 @@ const LocationSection = () => {
               </motion.div>
             ))}
 
-            <div className="pt-4">
+            <div className="pt-3">
               <WhatsAppButton size="lg" className="w-full justify-center">
                 Falar no WhatsApp
               </WhatsAppButton>
             </div>
           </motion.div>
 
-          {/* Right: Map */}
+          {/* Map */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="lg:col-span-3 relative"
+            className="lg:col-span-3"
           >
-            <div className="rounded-2xl overflow-hidden shadow-xl border border-border/50 bg-accent">
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-border/50 bg-card">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.0!2d-48.06!3d-15.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDU3JzAzLjAiUyA0OMKwMDMnMzYuMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
                 width="100%"
@@ -104,22 +104,9 @@ const LocationSection = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização RK Odontologia e Estética"
-                className="grayscale-[0.6] hover:grayscale-0 transition-all duration-700"
+                className="grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
               />
             </div>
-
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="absolute -top-5 right-6 glass-strong rounded-xl px-5 py-3 shadow-lg border border-border/50 animate-float"
-            >
-              <div className="flex items-center gap-2.5">
-                <Navigation className="w-4 h-4 text-primary" />
-                <span className="text-xs font-semibold text-foreground">Fácil acesso no Gama – DF</span>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
