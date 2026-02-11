@@ -69,11 +69,10 @@ const HeroSection = () => {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] mb-8"
               style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
             >
-              <span className="text-white block">Seu sorriso</span>
-              <span className="text-white block">merece</span>
-              <span className="block mt-1">
+              <span className="text-white block">Estética, precisão</span>
+              <span className="text-white block">e{" "}
                 <span className="relative inline-block">
-                  <span className="text-gradient-gold italic" style={{ filter: 'brightness(1.2) saturate(1.3)' }}>cuidado de verdade.</span>
+                  <span className="text-gradient-gold italic" style={{ filter: 'brightness(1.2) saturate(1.3)' }}>cuidado</span>
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
@@ -82,6 +81,7 @@ const HeroSection = () => {
                   />
                 </span>
               </span>
+              <span className="text-white block">em cada sorriso.</span>
             </motion.h1>
 
             {/* Subtext */}
@@ -92,8 +92,8 @@ const HeroSection = () => {
               className="text-base sm:text-lg text-white/75 mb-12 leading-relaxed max-w-md font-light"
               style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
             >
-              Tratamentos personalizados com foco em estética, função e naturalidade. 
-              Tecnologia, precisão e cuidado em cada detalhe.
+              Tratamentos personalizados com foco em naturalidade, função e harmonia facial. 
+              Tecnologia e planejamento individual para resultados duradouros.
             </motion.p>
 
             {/* CTA buttons */}
@@ -114,6 +114,16 @@ const HeroSection = () => {
                 Ligar agora
               </a>
             </motion.div>
+
+            {/* Trust micro-text */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.4 }}
+              className="text-white/45 text-xs mt-5 font-medium tracking-wide"
+            >
+              Atendimento com hora marcada e planejamento individual.
+            </motion.p>
           </div>
 
           {/* Right side - floating cards */}

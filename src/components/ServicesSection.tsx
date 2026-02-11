@@ -57,7 +57,7 @@ const ServicesSection = () => {
             <span className="text-gradient-gold italic">especializados</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Atendimento completo, com planejamento integrado e visão estética.
+            Atendimento completo em saúde e estética bucal, com planejamento integrado.
           </p>
         </motion.div>
 

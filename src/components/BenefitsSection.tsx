@@ -7,12 +7,12 @@ const benefits = [
   {
     icon: Heart,
     title: "Atendimento Humanizado",
-    description: "Escuta ativa e planejamento individualizado para cada paciente, com acolhimento genuíno em todas as etapas.",
+    description: "Escuta ativa e planejamento individual para cada paciente, do primeiro contato ao resultado final.",
   },
   {
     icon: Award,
     title: "Profissionais Qualificados",
-    description: "Atualização constante e foco em excelência técnica para oferecer os tratamentos mais adequados.",
+    description: "Atualização constante e foco técnico para oferecer os tratamentos mais adequados a cada caso.",
   },
   {
     icon: Building2,
@@ -21,8 +21,8 @@ const benefits = [
   },
   {
     icon: MessageCircle,
-    title: "Fácil Agendamento",
-    description: "Agende pelo WhatsApp de forma rápida e prática. Sem burocracia, sem complicação.",
+    title: "Atendimento Próximo",
+    description: "Comunicação transparente e acessível. Agende pelo WhatsApp de forma rápida e sem burocracia.",
   },
 ];
 
