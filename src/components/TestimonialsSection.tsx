@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="relative py-32 lg:py-44 bg-secondary overflow-hidden">
+    <section className="relative py-36 lg:py-48 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(35 30% 93%) 0%, hsl(35 25% 90%) 50%, hsl(35 30% 93%) 100%)' }}>
       <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-[120px]" />
 
@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/[0.08] border border-primary/10">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={i} className="w-4.5 h-4.5 fill-primary text-primary" />
                 ))}
               </div>
               <span className="text-foreground font-bold text-sm">5,0</span>
@@ -84,13 +84,13 @@ const TestimonialsSection = () => {
                 initial={{ opacity: 0, y: 25 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
-                className={`card-premium p-8 relative ${i === active ? 'border-primary/30 shadow-gold-glow' : ''}`}
+                className={`card-premium p-8 relative transition-all duration-300 ease-in-out ${i === active ? 'border-primary/25 shadow-gold' : ''}`}
               >
                 <Quote className="w-8 h-8 text-primary/10 absolute top-6 right-6" />
                 
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(t.rating)].map((_, j) => (
-                    <Star key={j} className="w-3.5 h-3.5 fill-primary text-primary" />
+                    <Star key={j} className="w-4 h-4 fill-primary text-primary" />
                   ))}
                 </div>
 

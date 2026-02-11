@@ -36,7 +36,7 @@ const ServicesSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="servicos" className="relative py-32 lg:py-44 bg-secondary overflow-hidden">
+    <section id="servicos" className="relative py-36 lg:py-48 bg-secondary overflow-hidden">
       {/* Decorative */}
       <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[150px]" />
@@ -77,7 +77,7 @@ const ServicesSection = () => {
                 <service.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
               </div>
 
-              <h3 className="text-lg font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-lg font-display font-extrabold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 ease-in-out">
                 {service.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-5">

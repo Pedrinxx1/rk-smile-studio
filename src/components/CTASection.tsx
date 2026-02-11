@@ -8,7 +8,7 @@ const CTASection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative py-32 lg:py-44 overflow-hidden">
+    <section className="relative py-36 lg:py-48 overflow-hidden">
       {/* Rich background */}
       <div className="absolute inset-0 bg-foreground" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-primary/10" />
