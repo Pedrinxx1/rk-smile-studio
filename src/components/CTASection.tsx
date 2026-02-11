@@ -8,13 +8,13 @@ const CTASection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative py-28 lg:py-36 overflow-hidden">
+    <section className="relative py-32 lg:py-44 overflow-hidden">
       {/* Rich background */}
       <div className="absolute inset-0 bg-foreground" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-primary/10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/[0.06] blur-[150px]" />
 
-      {/* Grid pattern overlay */}
+      {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: 'radial-gradient(circle, hsl(var(--primary-foreground)) 1px, transparent 1px)',
         backgroundSize: '40px 40px'
@@ -31,25 +31,30 @@ const CTASection = () => {
             initial={{ scale: 0 }}
             animate={inView ? { scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
-            className="w-16 h-16 rounded-2xl bg-gradient-gold mx-auto mb-8 flex items-center justify-center shadow-gold-lg rotate-3"
+            className="w-16 h-16 rounded-2xl bg-gradient-gold mx-auto mb-8 flex items-center justify-center shadow-gold-glow rotate-3"
           >
             <Sparkles className="w-7 h-7 text-primary-foreground" />
           </motion.div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground leading-tight mb-6">
-            Pronto para{" "}
-            <span className="text-gradient-gold italic">transformar</span>
-            <br />
-            seu sorriso?
+            Seu novo sorriso{" "}
+            <span className="text-gradient-gold-bright italic">começa hoje.</span>
           </h2>
-          <p className="text-primary-foreground/50 text-lg leading-relaxed mb-10 max-w-md mx-auto">
-            Agende sua avaliação e descubra o tratamento ideal para você.
+          <p className="text-primary-foreground/55 text-lg leading-relaxed mb-12 max-w-md mx-auto">
+            Agende sua avaliação e descubra o tratamento ideal para você. O cuidado que você merece está a um clique.
           </p>
-          <WhatsAppButton size="lg">
-            Agendar no WhatsApp agora
-          </WhatsAppButton>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <WhatsAppButton size="lg" className="shadow-xl hover:shadow-2xl">
+              Falar com a RK no WhatsApp
+            </WhatsAppButton>
+          </motion.div>
 
-          <p className="text-primary-foreground/25 text-xs mt-6 tracking-wide">
+          <p className="text-primary-foreground/25 text-xs mt-8 tracking-wide">
             Atendimento rápido e humanizado pelo WhatsApp
           </p>
         </motion.div>

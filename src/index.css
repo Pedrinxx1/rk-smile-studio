@@ -74,10 +74,16 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
+    line-height: 1.15;
+  }
+
+  p {
+    line-height: 1.8;
   }
 
   ::selection {
@@ -98,6 +104,14 @@
     background-clip: text;
   }
 
+  .text-gradient-gold-bright {
+    background: linear-gradient(135deg, hsl(var(--gold-glow)), hsl(36 80% 65%), hsl(var(--gold-glow)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: brightness(1.1);
+  }
+
   .bg-gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
   }
@@ -108,6 +122,10 @@
 
   .shadow-gold-lg {
     box-shadow: 0 20px 60px -15px hsl(var(--gold) / 0.35);
+  }
+
+  .shadow-gold-glow {
+    box-shadow: 0 0 30px hsl(var(--gold) / 0.2), 0 10px 40px -10px hsl(var(--gold) / 0.3);
   }
 
   .glass {
@@ -124,6 +142,23 @@
 
   .border-gradient-gold {
     border-image: linear-gradient(135deg, hsl(var(--gold) / 0.3), hsl(var(--gold) / 0.1)) 1;
+  }
+
+  .card-premium {
+    @apply rounded-2xl bg-card border border-border/60;
+    box-shadow: 0 1px 3px hsl(var(--gold) / 0.04), 0 8px 24px -4px hsl(30 10% 15% / 0.04);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-premium:hover {
+    border-color: hsl(var(--gold) / 0.25);
+    box-shadow: 0 4px 12px hsl(var(--gold) / 0.08), 0 20px 40px -8px hsl(30 10% 15% / 0.08);
+    transform: translateY(-4px);
+  }
+
+  .section-divider {
+    @apply h-px w-full;
+    background: linear-gradient(to right, transparent, hsl(var(--gold) / 0.15), transparent);
   }
 }
 

@@ -29,8 +29,8 @@ const LocationSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contato" className="relative py-28 lg:py-40 bg-secondary overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+    <section id="contato" className="relative py-32 lg:py-44 bg-secondary overflow-hidden">
+      <div className="section-divider absolute top-0 left-0 right-0" />
 
       <div className="container mx-auto px-6 lg:px-16 relative z-10" ref={ref}>
         {/* Header */}
@@ -67,14 +67,14 @@ const LocationSection = () => {
                 initial={{ opacity: 0, y: 15 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border/50 hover:border-primary/20 hover:shadow-md transition-all duration-300"
+                className="card-premium flex items-start gap-4 p-6"
               >
-                <div className="w-10 h-10 rounded-xl bg-primary/[0.07] flex items-center justify-center shrink-0">
-                  <item.icon className="w-4.5 h-4.5 text-primary" />
+                <div className="w-11 h-11 rounded-xl bg-primary/[0.07] border border-primary/10 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground text-sm mb-0.5">{item.title}</p>
-                  <p className="text-foreground/80 text-sm">{item.content}</p>
+                  <p className="font-semibold text-foreground text-sm mb-1">{item.title}</p>
+                  <p className="text-foreground/80 text-sm font-medium">{item.content}</p>
                   <p className="text-muted-foreground text-xs mt-0.5">{item.subtitle}</p>
                 </div>
               </motion.div>
@@ -94,7 +94,7 @@ const LocationSection = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="lg:col-span-3"
           >
-            <div className="rounded-2xl overflow-hidden shadow-xl border border-border/50 bg-card">
+            <div className="rounded-3xl overflow-hidden shadow-2xl border border-border/50 bg-card">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.0!2d-48.06!3d-15.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDU3JzAzLjAiUyA0OMKwMDMnMzYuMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
                 width="100%"
@@ -104,7 +104,7 @@ const LocationSection = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização RK Odontologia e Estética"
-                className="grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
+                className="grayscale-[0.4] hover:grayscale-0 transition-all duration-700"
               />
             </div>
           </motion.div>

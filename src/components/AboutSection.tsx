@@ -15,8 +15,9 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="sobre" className="relative py-28 lg:py-40 bg-background overflow-hidden">
+    <section id="sobre" className="relative py-32 lg:py-44 bg-background overflow-hidden">
       {/* Subtle background accents */}
+      <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-secondary/60 to-transparent" />
       <div className="absolute bottom-20 left-10 w-72 h-72 rounded-full bg-primary/[0.03] blur-[100px]" />
 
