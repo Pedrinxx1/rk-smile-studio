@@ -116,13 +116,13 @@ const AboutSection = () => {
             {/* Stats */}
             <div className="flex gap-10 pt-8 border-t border-border/50">
               {[
-                { value: "5+", label: "Especialidades" },
+                { value: "✦", label: "Atendimento completo em saúde e estética bucal" },
                 { value: "100%", label: "Dedicação" },
                 { value: "∞", label: "Sorrisos" },
               ].map((stat) => (
-                <div key={stat.label}>
+                <div key={stat.label} className={stat.label.length > 20 ? "max-w-[180px]" : ""}>
                   <p className="text-2xl font-display font-bold text-gradient-gold">{stat.value}</p>
-                  <p className="text-muted-foreground text-[11px] mt-1 tracking-wide uppercase">{stat.label}</p>
+                  <p className="text-muted-foreground text-[11px] mt-1 tracking-wide uppercase leading-relaxed">{stat.label}</p>
                 </div>
               ))}
             </div>
