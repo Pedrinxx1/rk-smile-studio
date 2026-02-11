@@ -29,7 +29,7 @@ const LocationSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contato" className="relative py-32 lg:py-44 bg-secondary overflow-hidden">
+    <section id="contato" className="relative py-24 lg:py-36 bg-secondary overflow-hidden">
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <div className="container mx-auto px-6 lg:px-16 relative z-10" ref={ref}>
