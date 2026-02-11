@@ -1,4 +1,5 @@
 import { Instagram, Heart, MapPin } from "lucide-react";
+import rkLogo from "@/assets/rk-logo-clean.png";
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-gold flex items-center justify-center shadow-gold">
-                <span className="text-primary-foreground font-display font-bold text-base">R</span>
-              </div>
+              <img src={rkLogo} alt="RK Odontologia" className="w-10 h-10 object-contain" />
               <div>
                 <h3 className="font-display text-lg font-bold text-primary-foreground leading-tight">
                   RK Odontologia
