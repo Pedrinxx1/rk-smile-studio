@@ -86,9 +86,9 @@ const AboutSection = () => {
             <div className="w-14 h-[2px] bg-gradient-gold rounded-full mb-8" />
 
             <p className="text-muted-foreground leading-relaxed mb-10">
-              Na <strong className="text-foreground font-semibold">RK Odontologia & Estética</strong>, cada 
-              sorriso é planejado de forma individual. Unimos técnica, estética e atenção aos detalhes para 
-              entregar resultados naturais, funcionais e duradouros.
+              Na <strong className="text-foreground font-semibold">RK Odontologia</strong>, cada 
+              sorriso é planejado com atenção aos detalhes. Integramos técnica, estética e funcionalidade 
+              para entregar resultados naturais e equilibrados.
             </p>
 
             {/* Checklist */}
