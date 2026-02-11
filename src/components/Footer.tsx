@@ -75,9 +75,6 @@ const Footer = () => {
           <p className="text-primary-foreground/25 text-xs">
             © {new Date().getFullYear()} RK Odontologia e Estética. Todos os direitos reservados.
           </p>
-          <p className="flex items-center gap-1.5 text-primary-foreground/20 text-xs">
-            Feito com <Heart className="w-3 h-3 text-primary/40" /> para você
-          </p>
         </div>
       </div>
     </footer>
