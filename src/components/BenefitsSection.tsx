@@ -31,7 +31,7 @@ const BenefitsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="diferenciais" className="relative py-32 lg:py-44 bg-background overflow-hidden">
+    <section id="diferenciais" className="relative py-36 lg:py-48 bg-background overflow-hidden">
       <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-primary/[0.02] blur-[120px]" />
 
@@ -68,7 +68,7 @@ const BenefitsSection = () => {
               <div className="w-14 h-14 rounded-2xl bg-primary/[0.06] border border-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/[0.12] group-hover:scale-105 group-hover:border-primary/20 transition-all duration-500">
                 <benefit.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-lg font-display font-extrabold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 ease-in-out">
                 {benefit.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">

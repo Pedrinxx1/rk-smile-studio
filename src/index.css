@@ -145,15 +145,15 @@
   }
 
   .card-premium {
-    @apply rounded-2xl bg-card border border-border/60;
-    box-shadow: 0 1px 3px hsl(var(--gold) / 0.04), 0 8px 24px -4px hsl(30 10% 15% / 0.04);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply rounded-2xl bg-card border border-border/50;
+    box-shadow: 0 1px 2px hsl(var(--gold) / 0.03), 0 4px 16px -4px hsl(30 10% 15% / 0.03);
+    transition: all 0.3s ease-in-out;
   }
 
   .card-premium:hover {
-    border-color: hsl(var(--gold) / 0.25);
-    box-shadow: 0 4px 12px hsl(var(--gold) / 0.08), 0 20px 40px -8px hsl(30 10% 15% / 0.08);
-    transform: translateY(-4px);
+    border-color: hsl(var(--gold) / 0.2);
+    box-shadow: 0 4px 12px hsl(var(--gold) / 0.06), 0 16px 32px -8px hsl(30 10% 15% / 0.06);
+    transform: translateY(-3px);
   }
 
   .section-divider {
