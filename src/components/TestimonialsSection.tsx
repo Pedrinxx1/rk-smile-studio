@@ -137,8 +137,8 @@ const TestimonialsSection = () => {
               <Users className="w-4 h-4 text-primary" />
             </div>
             <div>
-              <p className="text-foreground font-bold text-sm">+500 pacientes atendidos</p>
-              <p className="text-muted-foreground text-xs">com excelência e dedicação</p>
+              <p className="text-foreground font-bold text-sm">Excelência reconhecida</p>
+              <p className="text-muted-foreground text-xs">por nossos pacientes</p>
             </div>
           </div>
         </motion.div>
