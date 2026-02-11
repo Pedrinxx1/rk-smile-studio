@@ -18,7 +18,7 @@ const WhatsAppButton = ({ children, className = "", size = "default" }: WhatsApp
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-full bg-[#25D366] text-white font-semibold shadow-lg hover:bg-[#1ebe5d] transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 hover:scale-[1.02] ${sizeClasses} ${className}`}
+      className={`inline-flex items-center justify-center rounded-full bg-[#25D366] text-white font-semibold shadow-lg hover:bg-[#1ebe5d] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.03] active:scale-[0.98] ${sizeClasses} ${className}`}
     >
       <MessageCircle className="w-5 h-5" />
       {children}

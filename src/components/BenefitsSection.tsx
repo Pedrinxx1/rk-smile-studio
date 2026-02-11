@@ -8,25 +8,21 @@ const benefits = [
     icon: Heart,
     title: "Atendimento Humanizado",
     description: "Cada paciente é único. Cuidamos de você com atenção, respeito e acolhimento genuíno.",
-    accent: "from-rose-500/10 to-primary/10",
   },
   {
     icon: Award,
     title: "Profissionais Qualificados",
     description: "Equipe com formação especializada e atualização constante para os melhores resultados.",
-    accent: "from-amber-500/10 to-primary/10",
   },
   {
     icon: Building2,
     title: "Ambiente Moderno",
     description: "Consultório equipado com tecnologia de ponta para garantir conforto e excelência.",
-    accent: "from-blue-500/10 to-primary/10",
   },
   {
     icon: MessageCircle,
     title: "Fácil Agendamento",
     description: "Agende pelo WhatsApp de forma rápida e prática. Sem burocracia, sem complicação.",
-    accent: "from-emerald-500/10 to-primary/10",
   },
 ];
 
@@ -35,8 +31,8 @@ const BenefitsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="diferenciais" className="relative py-28 lg:py-40 bg-background overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+    <section id="diferenciais" className="relative py-32 lg:py-44 bg-background overflow-hidden">
+      <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-primary/[0.02] blur-[120px]" />
 
       <div className="container mx-auto px-6 lg:px-16 relative z-10" ref={ref}>
@@ -54,38 +50,30 @@ const BenefitsSection = () => {
             Por que{" "}
             <span className="text-gradient-gold italic">escolher</span> a RK?
           </h2>
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/[0.06] mb-5">
-            <span className="text-primary font-semibold text-sm">⭐ 5,0 no Google (41 avaliações)</span>
-          </div>
           <p className="text-muted-foreground leading-relaxed">
             Pacientes satisfeitos com atendimento de excelência, desde a recepção até o resultado final.
           </p>
         </motion.div>
 
         {/* Benefits grid */}
-        <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto mb-16">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
           {benefits.map((benefit, i) => (
             <motion.div
               key={benefit.title}
               initial={{ opacity: 0, y: 25 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
-              className="group relative rounded-2xl p-8 border border-border/60 hover:border-primary/20 bg-card hover:shadow-gold transition-all duration-500"
+              className="group card-premium p-8"
             >
-              {/* Gradient background on hover */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${benefit.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-primary/[0.07] flex items-center justify-center mb-5 group-hover:bg-primary/[0.12] group-hover:scale-105 transition-all duration-500">
-                  <benefit.icon className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="text-lg font-display font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground/70 transition-colors duration-300">
-                  {benefit.description}
-                </p>
+              <div className="w-14 h-14 rounded-2xl bg-primary/[0.06] border border-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/[0.12] group-hover:scale-105 group-hover:border-primary/20 transition-all duration-500">
+                <benefit.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
               </div>
+              <h3 className="text-lg font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                {benefit.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {benefit.description}
+              </p>
             </motion.div>
           ))}
         </div>

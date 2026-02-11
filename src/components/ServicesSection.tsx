@@ -20,7 +20,7 @@ const services = [
     description: "Equilíbrio e harmonia facial com técnicas avançadas e resultados naturais e duradouros.",
   },
   {
-    icon: Star,
+    icon: Syringe,
     title: "Botox",
     description: "Suavize linhas de expressão e rejuvenesça o rosto com aplicações seguras e resultados naturais.",
   },
@@ -36,9 +36,9 @@ const ServicesSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="servicos" className="relative py-28 lg:py-40 bg-secondary overflow-hidden">
+    <section id="servicos" className="relative py-32 lg:py-44 bg-secondary overflow-hidden">
       {/* Decorative */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+      <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[150px]" />
 
       <div className="container mx-auto px-6 lg:px-16" ref={ref}>
@@ -63,34 +63,39 @@ const ServicesSection = () => {
         </motion.div>
 
         {/* Service grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 25 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative rounded-2xl p-7 bg-card border border-border/60 hover:border-primary/25 hover:shadow-gold transition-all duration-500"
+              className="group card-premium p-8 relative"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-primary/[0.07] flex items-center justify-center mb-5 group-hover:bg-primary/[0.12] group-hover:scale-105 transition-all duration-500">
-                <service.icon className="w-5 h-5 text-primary" />
+              <div className="w-14 h-14 rounded-2xl bg-primary/[0.06] border border-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/[0.12] group-hover:scale-105 group-hover:border-primary/20 transition-all duration-500">
+                <service.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
               </div>
 
-              <h3 className="text-lg font-display font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-lg font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                 {service.description}
               </p>
 
-              <div className="flex items-center gap-1.5 text-primary/60 group-hover:text-primary text-xs font-medium transition-colors duration-300">
+              <a
+                href="https://wa.me/5561998378600?text=Olá! Gostaria de saber mais sobre o tratamento de {service.title}."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-primary/70 group-hover:text-primary text-sm font-medium transition-colors duration-300"
+              >
                 <span>Saiba mais</span>
-                <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
-              </div>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
 
-              {/* Bottom accent */}
-              <div className="absolute bottom-0 left-4 right-4 h-[2px] bg-gradient-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center rounded-full" />
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-6 right-6 h-[2px] bg-gradient-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center rounded-full" />
             </motion.div>
           ))}
         </div>
