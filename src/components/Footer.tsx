@@ -59,7 +59,7 @@ const Footer = () => {
             <p className="text-primary-foreground/50 text-sm mb-1">📞 (61) 99837-8600</p>
             <p className="text-primary-foreground/50 text-sm mb-4">📧 rkodontologiadf@gmail.com</p>
             <a
-              href="https://instagram.com/"
+              href="https://www.instagram.com/rkodontologiadf/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-foreground/10 text-primary-foreground/50 hover:text-primary-foreground hover:border-primary/30 transition-all duration-300"
