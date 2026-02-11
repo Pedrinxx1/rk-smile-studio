@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="relative py-32 lg:py-44 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(35 30% 93%) 0%, hsl(35 25% 90%) 50%, hsl(35 30% 93%) 100%)' }}>
+    <section className="relative py-24 lg:py-36 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(35 30% 93%) 0%, hsl(35 25% 90%) 50%, hsl(35 30% 93%) 100%)' }}>
       <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-[120px]" />
 
