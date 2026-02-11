@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <img src={rkLogo} alt="RK Odontologia" className="w-10 h-10 object-contain" />
+              <img src={rkLogo} alt="RK Odontologia" className="w-12 h-12 object-contain drop-shadow-md" />
               <div>
                 <h3 className="font-display text-lg font-bold text-primary-foreground leading-tight">
                   RK Odontologia
