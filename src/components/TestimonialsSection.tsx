@@ -69,8 +69,8 @@ const TestimonialsSection = () => {
                   <Star key={i} className="w-4.5 h-4.5 fill-primary text-primary" />
                 ))}
               </div>
-              <span className="text-foreground font-bold text-sm">5,0</span>
-              <span className="text-muted-foreground text-sm">no Google (41 avaliações)</span>
+              <span className="text-foreground font-bold text-sm">5,0 ⭐ no Google</span>
+              <span className="text-muted-foreground text-sm">| Avaliações reais de pacientes</span>
             </div>
           </div>
         </motion.div>

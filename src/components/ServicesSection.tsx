@@ -57,8 +57,7 @@ const ServicesSection = () => {
             <span className="text-gradient-gold italic">especializados</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Soluções completas em odontologia e estética facial, com tecnologia moderna e 
-            profissionais qualificados.
+            Atendimento completo, com planejamento integrado e visão estética.
           </p>
         </motion.div>
 

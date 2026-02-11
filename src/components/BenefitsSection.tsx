@@ -7,17 +7,17 @@ const benefits = [
   {
     icon: Heart,
     title: "Atendimento Humanizado",
-    description: "Cada paciente é único. Cuidamos de você com atenção, respeito e acolhimento genuíno.",
+    description: "Escuta ativa e planejamento individualizado para cada paciente, com acolhimento genuíno em todas as etapas.",
   },
   {
     icon: Award,
     title: "Profissionais Qualificados",
-    description: "Equipe com formação especializada e atualização constante para os melhores resultados.",
+    description: "Atualização constante e foco em excelência técnica para oferecer os tratamentos mais adequados.",
   },
   {
     icon: Building2,
     title: "Ambiente Moderno",
-    description: "Consultório equipado com tecnologia de ponta para garantir conforto e excelência.",
+    description: "Estrutura confortável e equipamentos atuais, pensados para sua segurança e bem-estar.",
   },
   {
     icon: MessageCircle,
