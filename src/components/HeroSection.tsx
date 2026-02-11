@@ -138,8 +138,8 @@ const HeroSection = () => {
               transition={{ duration: 0.7, delay: 1.5 }}
               className="bg-black/30 backdrop-blur-xl border border-white/10 rounded-2xl p-6 max-w-xs hover:border-primary/20 transition-all duration-500"
             >
-              <p className="text-3xl font-display font-bold text-gradient-gold mb-1">+500</p>
-              <p className="text-white/55 text-xs font-medium">Pacientes atendidos com excelência</p>
+              <p className="text-xl font-display font-bold text-gradient-gold mb-1">Excelência</p>
+              <p className="text-white/55 text-xs font-medium">Reconhecida por nossos pacientes</p>
             </motion.div>
           </div>
         </div>
