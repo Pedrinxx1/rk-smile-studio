@@ -33,13 +33,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-2.5">
-            <img src={rkLogo} alt="RK Odontologia" className="w-12 h-12 object-contain drop-shadow-md" />
+          <a href="#" className="flex items-center gap-3.5">
+            <img src={rkLogo} alt="RK Odontologia" className="w-10 h-10 object-contain drop-shadow-md" />
             <div className="flex flex-col">
-              <span className={`font-display text-base font-bold leading-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-                RK <span className="text-gradient-gold">Odonto</span>
+              <span className={`font-display text-lg leading-tight transition-colors duration-300`}>
+                <span className="font-bold text-gradient-gold">RK</span>{" "}
+                <span className={`font-semibold transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white/90"}`}>Odonto</span>
               </span>
-              <span className={`text-[9px] tracking-[0.2em] uppercase font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-primary-foreground/40"}`}>
+              <span className={`text-[8px] tracking-[0.3em] uppercase font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-white/40"}`}>
                 & Estética
               </span>
             </div>
