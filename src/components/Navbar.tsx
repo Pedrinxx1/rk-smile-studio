@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import rkLogo from "@/assets/rk-logo-clean.png";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -33,9 +34,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center gap-2.5">
-            <div className={`w-9 h-9 rounded-xl bg-gradient-gold flex items-center justify-center shadow-gold transition-all duration-300 ${scrolled ? "" : "shadow-gold-lg"}`}>
-              <span className="text-primary-foreground font-display font-bold text-sm">R</span>
-            </div>
+            <img src={rkLogo} alt="RK Odontologia" className="w-10 h-10 object-contain" />
             <div className="flex flex-col">
               <span className={`font-display text-base font-bold leading-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
                 RK <span className="text-gradient-gold">Odonto</span>
