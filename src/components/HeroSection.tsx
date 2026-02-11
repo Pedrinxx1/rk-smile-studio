@@ -148,17 +148,6 @@ const HeroSection = () => {
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-      {/* Scroll indicator */}
-      <motion.a
-        href="#sobre"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors cursor-pointer"
-      >
-        <span className="text-[10px] tracking-[0.3em] uppercase font-medium">Explore</span>
-        <ChevronDown className="w-4 h-4 animate-float" />
-      </motion.a>
     </section>
   );
 };
