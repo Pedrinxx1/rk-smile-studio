@@ -36,7 +36,7 @@ const ServicesSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="servicos" className="relative py-24 lg:py-36 bg-secondary overflow-hidden">
+    <section id="servicos" className="relative py-20 lg:py-28 bg-secondary overflow-hidden">
       {/* Decorative */}
       <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-[150px]" />
