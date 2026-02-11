@@ -70,10 +70,10 @@ const HeroSection = () => {
               style={{ textShadow: '0 2px 20px rgba(0,0,0,0.3)' }}
             >
               <span className="text-white block">Seu sorriso</span>
-              <span className="text-white block">merece o</span>
+              <span className="text-white block">merece</span>
               <span className="block mt-1">
                 <span className="relative inline-block">
-                  <span className="text-gradient-gold italic" style={{ filter: 'brightness(1.2) saturate(1.3)' }}>melhor cuidado.</span>
+                  <span className="text-gradient-gold italic" style={{ filter: 'brightness(1.2) saturate(1.3)' }}>cuidado de verdade.</span>
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
@@ -92,8 +92,8 @@ const HeroSection = () => {
               className="text-base sm:text-lg text-white/75 mb-12 leading-relaxed max-w-md font-light"
               style={{ textShadow: '0 1px 8px rgba(0,0,0,0.2)' }}
             >
-              Na RK Odontologia & Estética, devolvemos o que há de melhor em você: 
-              saúde, estética e confiança ao sorrir.
+              Tratamentos personalizados com foco em estética, função e naturalidade. 
+              Tecnologia, precisão e cuidado em cada detalhe.
             </motion.p>
 
             {/* CTA buttons */}
