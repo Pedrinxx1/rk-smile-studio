@@ -31,7 +31,7 @@ const BenefitsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="diferenciais" className="relative py-36 lg:py-48 bg-background overflow-hidden">
+    <section id="diferenciais" className="relative py-32 lg:py-44 bg-background overflow-hidden">
       <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-primary/[0.02] blur-[120px]" />
 
