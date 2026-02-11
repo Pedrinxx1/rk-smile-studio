@@ -27,7 +27,7 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#d5cbc0] backdrop-blur-xl border-b border-border/40 shadow-sm"
+          ? "bg-[#2c2520] backdrop-blur-xl border-b border-border/40 shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -40,9 +40,9 @@ const Navbar = () => {
             <div className="flex flex-col">
               <span className={`font-display text-lg leading-tight transition-colors duration-300`}>
                 <span className="font-bold text-gradient-gold">RK</span>{" "}
-                <span className={`font-semibold transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white/90"}`}>Odonto</span>
+                <span className={`font-semibold transition-colors duration-300 ${scrolled ? "text-white/90" : "text-white/90"}`}>Odonto</span>
               </span>
-              <span className={`text-[8px] tracking-[0.3em] uppercase font-medium transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-white/40"}`}>
+              <span className={`text-[8px] tracking-[0.3em] uppercase font-medium transition-colors duration-300 ${scrolled ? "text-white/40" : "text-white/40"}`}>
                 & Estética
               </span>
             </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 href={link.href}
                 className={`text-sm font-medium px-4 py-2 rounded-lg transition-all duration-300 ${
                   scrolled
-                    ? "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                    ? "text-white/70 hover:text-white hover:bg-white/10"
                     : "text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/5"
                 }`}
               >
@@ -77,7 +77,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              scrolled ? "text-foreground hover:bg-accent/50" : "text-primary-foreground hover:bg-primary-foreground/10"
+              scrolled ? "text-white hover:bg-white/10" : "text-primary-foreground hover:bg-primary-foreground/10"
             }`}
             aria-label="Menu"
           >
