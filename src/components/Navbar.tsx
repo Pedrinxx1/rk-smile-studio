@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center gap-2.5">
-            <img src={rkLogo} alt="RK Odontologia" className="w-10 h-10 object-contain" />
+            <img src={rkLogo} alt="RK Odontologia" className="w-12 h-12 object-contain drop-shadow-md" />
             <div className="flex flex-col">
               <span className={`font-display text-base font-bold leading-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
                 RK <span className="text-gradient-gold">Odonto</span>
