@@ -27,14 +27,14 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-sm"
+          ? "bg-[#e8e0d8] backdrop-blur-xl border-b border-border/40 shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center gap-2.5">
-            <div className={`p-1.5 rounded-xl transition-all duration-300 ${scrolled ? "bg-foreground/25" : "bg-transparent"}`}>
+            <div className={`p-1.5 rounded-xl transition-all duration-300 ${scrolled ? "bg-black/15" : "bg-transparent"}`}>
               <img src={rkLogo} alt="RK Odontologia" className="w-[3.2rem] h-[3.2rem] object-contain opacity-100 brightness-110 contrast-110 drop-shadow-[0_3px_10px_rgba(212,175,55,0.5)]" />
             </div>
             <div className="flex flex-col">

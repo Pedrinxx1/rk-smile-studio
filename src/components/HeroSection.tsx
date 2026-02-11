@@ -120,7 +120,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.4 }}
-              className="text-white/45 text-xs mt-5 font-medium tracking-wide"
+              className="text-white/70 text-xs mt-5 font-semibold tracking-wide drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]"
             >
               Atendimento com hora marcada e planejamento individual.
             </motion.p>
